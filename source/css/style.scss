@@ -286,38 +286,3 @@ h6 {
     color: #ffffff;
     text-align: left;
 }
-.slider-container{
-    
-}
-.slider-wrapper{
-    position: relative;
-}
-.slider-item_active {
-    position: absolute;
-    top: 40px;
-    left: 15%;
-    img{
-        width: 800px;
-        height: 533.33px;
-    }
-}
-.slider-item_left {
-    position: absolute;
-    top: 120px;
-    left: 0;
-    z-index: -1;
-}
-.slider-item_right {
-    position: absolute;
-    top: 120px;
-    right: 0;
-    z-index: -1;
-}
-.slider-dots{
-    position: relative;
-}
-.slider-dot{
-    width: 20px;
-    height: 10px;
-    background-color: #6FC28A;
-}
