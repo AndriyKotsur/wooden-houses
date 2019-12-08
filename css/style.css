@@ -233,6 +233,7 @@ header {
   border: 1px solid #6FC28A;
   margin: 20px 0px 20px 0px; }
 
+/* PRESENTATION BLOCK */
 .presentation-img img {
   width: 100%;
   max-width: 100%;
@@ -295,6 +296,7 @@ header {
   line-height: 21px;
   color: #6FC28A; }
 
+/* WHY ZRUB? */
 .block-why-zrub {
   background-image: url(../../img/background/background1.png); }
 
@@ -365,6 +367,7 @@ header {
   color: #ffffff;
   text-align: left; }
 
+/* SLIDER */
 .slider-title {
   font-family: 'Open Sans';
   font-size: 16px;
@@ -392,10 +395,7 @@ header {
 .slider-item {
   margin: 0px 10px 0px 10px; }
   .slider-item:hover {
-    outline: 2px solid #6FC28A;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    outline: 4px solid #6FC28A; }
 
 .slider-img {
   width: 100%;
@@ -424,3 +424,5 @@ header {
   .slider-dot.active {
     background: #ffffff;
     outline: 2px solid #6FC28A; }
+
+/* WHY US? */
