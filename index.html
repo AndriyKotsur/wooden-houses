@@ -18,8 +18,6 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
-    <script src="/js/form.js"></script>
-    <script src="/js/slider.js"></script>
 </head>
 
 <body>
@@ -123,9 +121,9 @@
             </div>
         </div>
     </div>
-    <div class="slider-container">
+    <!--     <div class="slider-container">
         <div class="container">
-            <div class="slider-title">Каталог наших товарів</div>
+            
             <div class="slider-wrapper">
                 <div class="slider-item">
                     <img src="img/slider/slider2.png" alt="Slider photo" class="slider-img ">
@@ -143,7 +141,102 @@
                 <div class="slider-dot"></div>
             </div>
         </div>
+    </div> -->
+    <div class="container-content">
+        <div class="slideshow-container">
+            <div class="slider-title">Каталог наших товарів</div>
+            <div class="slideshow-items">
+                <div class="slides-item"><img src="img/source/house1.jpg" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/source/house4.jpg" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/source/house5.jpg" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/source/house4.jpg" alt="Slides photography"></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slideshow-row">
+                <div class="slideshow-row-items"><img src="img/slider/house1.jpg" alt="Slides photography"
+                        onclick="currentSlide(1)"></div>
+                <div class="slideshow-row-items"><img src="img/slider/house4.jpg" alt="Slides photography"
+                        onclick="currentSlide(2)"></div>
+                <div class="slideshow-row-items"><img src="img/slider/house5.jpg" alt="Slides photography"
+                        onclick="currentSlide(3)"></div>
+                <div class="slideshow-row-items"><img src="img/slider/house4.jpg" alt="Slides photography"
+                        onclick="currentSlide(4)"></div>
+            </div>
+        </div>
     </div>
+    <div class="block-why-us">
+        <div class="container-content">
+            <div class="block-why-us-title">Що ви отримуєте про виборі нашого проекту?</div>
+            <div class="block-why-us-items">
+                <div class="block-why-us-items_left">
+                    <div class="block-why-us-item">
+                        <div class="block-why-us-item_number">1</div>
+                        <div class="block-why-us-item_text">Індивідуальний підхід
+                            до кожного клієнта</div>
+                    </div>
+                    <div class="block-why-us-item">
+                        <div class="block-why-us-item_number">2</div>
+                        <div class="block-why-us-item_text">Дотримання домовлених термінів <br> та врахування всіх
+                            побажань
+                        </div>
+                    </div>
+                    <div class="block-why-us-item">
+                        <div class="block-why-us-item_number">3</div>
+                        <div class="block-why-us-item_text">Досвід та професіоналізм</div>
+                    </div>
+                </div>
+                <div class="block-why-us-items_right">
+                    <div class="block-why-us-item">
+                        <div class="block-why-us-item_number">4</div>
+                        <div class="block-why-us-item_text">Висока якість виконання проекту</div>
+                    </div>
+                    <div class="block-why-us-item">
+                        <div class="block-why-us-item_number">5</div>
+                        <div class="block-why-us-item_text">Ціни, які відповідають умовам на ринку</div>
+                    </div>
+                    <div class="block-why-us-item">
+                        <div class="block-why-us-item_number">6</div>
+                        <div class="block-why-us-item_text">Відповідальність за виконану роботу</div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-why-us-form">
+                <div class="block-why-us-form_title">Виникли питання?<br>Ми передзвонимо вам протягом 30 хвилин!</div>
+                <form action="  ">
+                    <ul class="form-items">
+                        <li class="form-item"><input type="text" placeholder="Ім'я"></li>
+                        <li class="form-item"><input type="text" placeholder="Номер"></li>
+                        <li class="form-item"><button type="submit">Замовити дзвінок</button></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="block-contacts">
+        <div class="container">
+            <div class="block-contacts-container">
+                <div class="block-contacts-items">
+                    <div class="block-contacts-item">
+                        <div class="block-contacts-item_img"><img src="img/icons/placeholder-filled-point.png" alt="Geoposition icon"></div>
+                        <div class="block-contacts-item_geoposition">вул. Лучкая, Міжгір’я, <br>
+                            Закарпатська область, 90001</div>
+                    </div>
+                    <div class="block-contacts-item">
+                        <div class="block-contacts-item_img"><img src="img/icons/smartphone-call.png" alt="Smartphone icon"></div>
+                        <div class="block-contacts-item_link"><a href="tel:+380664126181">+ 380 66 412 61 81</a></div>
+                    </div>
+                </div>
+                <div class="block-contacts-map" id="google-map"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/form.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04EqmmFTH7HHvNzsgQTNyWK2GJ20mrjw&callback=initMap"
+        async defer></script>
 
 </body>
 
