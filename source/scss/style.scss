@@ -146,6 +146,7 @@ $maxwidth:1180px;
 /* BLOCK WHY-ZRUB? */
 .block-why-zrub {
     background-image: url(../../img/background/background1.png);
+    background-size: cover;
 }
 
 .block-why-zrub-wrapper {
@@ -328,6 +329,7 @@ $maxwidth:1180px;
 /* WHY US? */
 .block-why-us {
     background-image: url(../../img/background/background2.png);
+    background-size: cover;
     padding: 40px 0px 40px 0px;
 }
 
@@ -422,6 +424,7 @@ $maxwidth:1180px;
         height: 40px;
         margin: 10px 0px 10px 0px;
         padding-left: 15px;
+        color: #6FC28A;
     }
 
     input[type='text']::placeholder {
@@ -476,7 +479,7 @@ $maxwidth:1180px;
     a {
         color: #6FC28A;
         font-family: 'Open Sans';
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
     }
     a:hover {
@@ -487,7 +490,7 @@ $maxwidth:1180px;
 .block-contacts-item_geoposition {
     color: #6FC28A;
     font-family: 'Open Sans';
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 21px;
     letter-spacing: 1.3;
