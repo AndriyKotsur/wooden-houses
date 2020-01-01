@@ -6,10 +6,10 @@ lang.onclick = function () {
         return false
     };
     if (link.title == 'ua') {
-        link.href = '../rus/index.html';
+        link.href = 'html/rus/index.html';
     } else if (link.title == 'rus') {
         link.href = '../eng/index.html';
     } else {
-        link.href = '../ua/index.html';
+        link.href = '../../index.html';
     }
 };

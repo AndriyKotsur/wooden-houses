@@ -395,11 +395,22 @@ $maxwidth:1180px;
         text-transform: uppercase;
     }
 
-    button:hover {
+    button:hover, button:focus {
         text-decoration: underline;
+        outline: none;
+    }
+    button {
+        background-color: #fafafa;
     }
 }
-
+/* ERROR */
+    .error {
+        display: block;
+        padding: 5px 5px;
+        background-color: red;
+        color: #ffffff;
+        opacity: 0.7;
+    }
 /* CONTACTS */
 .block-contacts {
     padding: 40px 0px 40px 0px;

@@ -627,8 +627,20 @@ header {
   margin-top: 20px;
   text-transform: uppercase; }
 
-.form-item button:hover {
-  text-decoration: underline; }
+.form-item button:hover, .form-item button:focus {
+  text-decoration: underline;
+  outline: none; }
+
+.form-item button {
+  background-color: #fafafa; }
+
+/* ERROR */
+.error {
+  display: block;
+  padding: 5px 5px;
+  background-color: red;
+  color: #ffffff;
+  opacity: 0.7; }
 
 /* CONTACTS */
 .block-contacts {

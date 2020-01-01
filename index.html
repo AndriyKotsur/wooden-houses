@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="ua" prefix="og: http://ogp.me/ns#">
 
 <head>
     <title>"Будівництво проектів із дикого зрубу"</title>
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="header-wrapper">
                 <div class="header-logo">
-                    <div class="header-logo-img"><img src="img/logo.png" alt="Wooden Houses"></div>
+                    <div class="header-logo-img"><img src="img/logo.svg" alt="Wooden Houses"></div>
                     <div class="header-logo-title">Wooden<br>houses</div>
                 </div>
                 <div class="header-menu">
@@ -39,9 +39,9 @@
                     </nav>
                 </div>
                 <div class="header-additional">
-                    <div class="header-language">
-                        <img src="img/icons/lang-switch.png" alt="Language icon" class="language-switch">
-                        <a href="#" class="header-language-link">Українська</a>
+                    <div class="header-language" id="lang">
+                        <img src="img/icons/icon-ua.svg" alt="Language icon" class="language-switch">
+                        <a href="index.html" class="header-language-link" id="lang_switch" title="ua">Українська</a>
                     </div>
                     <div class="header-contact">
                         <a href="tel:+380664126181" class="header-contact-link">+ 380 66 412 61 81</a>
@@ -53,7 +53,13 @@
     </header>
 
     <div class="presentation-img">
-        <img src="img/house5-1920.png" alt="Wooden house">
+        <picture>
+            <source media="(min-width: 1920px)" srcset="img/title/title-img-extra.png">
+            <source media="(max-width: 1920px)" srcset="img/title/title-img-big.png">
+            <source media="(max-width: 1024px)" srcset="img/title/title-img-medium.png">
+            <source media="(max-width: 768px)" srcset="img/title/title-img-small.png">
+            <img src="img/title/title-img-big.png" alt="Title image">
+        </picture>
     </div>
     <div class="container-content">
         <div class="block-content-presentation">
@@ -65,15 +71,16 @@
                 майстрів дозволяє надавати такі комплексні рішення.</div>
             <div class="block-content-presentation_products">
                 <div class="products-item">
-                    <div class="products-item-img"><img src="img/icons/icon-house.png" alt="Icon house"></div>
+                    <div class="products-item-img"><img src="img/icons/icon-house.svg" alt="Icon house"></div>
                     <div class="products-item-title">Будинки</div>
                 </div>
                 <div class="products-item">
-                    <div class="products-item-img"><img src="img/icons/icon-bench.png" alt="Icon bench"></div>
+                    <div class="products-item-img"><img src="img/icons/icon-bench.svg" alt="Icon bench"></div>
                     <div class="products-item-title">Лавки, столи</div>
                 </div>
                 <div class="products-item">
-                    <div class="products-item-img"><img src="img/icons/icon-garden-house.png" alt="Icon garden house">
+                    <div class="products-item-img"><img src="img/icons/icon-garden-house.svg"
+                            alt="Icon garden house">
                     </div>
                     <div class="products-item-title">Бані, альтанки</div>
                 </div>
@@ -84,10 +91,11 @@
         <div class="container-content">
             <div class="block-why-zrub-wrapper">
                 <div class="block-why-zrub-title">
-                    Чому саме дикий зруб?
+                    Why log wood?
                 </div>
                 <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-pinetree.png" alt="Pinetree icon">
+                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-pinetree.svg"
+                            alt="Pinetree icon">
                     </div>
                     <div class="block-why-zrub-benefits_text">Будівництво із дикого зрубу передбачає використання
                         соснових
@@ -96,14 +104,14 @@
                         такого будинку.</div>
                 </div>
                 <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-money.png" alt="Money icon">
+                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-money.svg" alt="Money icon">
                     </div>
                     <div class="block-why-zrub-benefits_text">Використання такого матеріалу суттєво знижує витрати на
                         будівництво. Готовий проект із дикого зруба обійдеться дешевше ніж при використанні інших
                         матеріалів.</div>
                 </div>
                 <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-table.png" alt="Table icon">
+                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-table.svg" alt="Table icon">
                     </div>
                     <div class="block-why-zrub-benefits_text">Термін будівництва проекту із дикого зрубу займає від 6 до
                         9
@@ -112,7 +120,7 @@
                         матеріалів.</div>
                 </div>
                 <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-clock.png" alt="Clock icon">
+                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-clock.svg" alt="Clock icon">
                     </div>
                     <div class="block-why-zrub-benefits_text">Термін експлуатаціх таких проектів має необмежений
                         характер.
@@ -121,46 +129,25 @@
             </div>
         </div>
     </div>
-    <!--     <div class="slider-container">
-        <div class="container">
-            
-            <div class="slider-wrapper">
-                <div class="slider-item">
-                    <img src="img/slider/slider2.png" alt="Slider photo" class="slider-img ">
-                </div>
-                <div class="slider-item">
-                    <img src="img/slider/slider1.png" alt="Slider photo" class="slider-img active">
-                </div>
-                <div class="slider-item">
-                    <img src="img/slider/slider4.png" alt="Slider photo" class="slider-img">
-                </div>
-            </div>
-            <div class="slider-dots">
-                <div class="slider-dot active"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-            </div>
-        </div>
-    </div> -->
     <div class="container-content">
         <div class="slideshow-container">
             <div class="slider-title">Каталог наших товарів</div>
             <div class="slideshow-items">
-                <div class="slides-item"><img src="img/source/house1.jpg" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/source/house4.jpg" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/source/house5.jpg" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/source/house4.jpg" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/slider/slider1.png" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/slider/slider2.png" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/slider/slider4.png" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/slider/slider1.png" alt="Slides photography"></div>
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <div class="slideshow-row">
-                <div class="slideshow-row-items"><img src="img/slider/house1.jpg" alt="Slides photography"
+                <div class="slideshow-row-items"><img src="img/slider/slider1.png" alt="Slides photography"
                         onclick="currentSlide(1)"></div>
-                <div class="slideshow-row-items"><img src="img/slider/house4.jpg" alt="Slides photography"
+                <div class="slideshow-row-items"><img src="img/slider/slider2.png" alt="Slides photography"
                         onclick="currentSlide(2)"></div>
-                <div class="slideshow-row-items"><img src="img/slider/house5.jpg" alt="Slides photography"
+                <div class="slideshow-row-items"><img src="img/slider/slider4.png" alt="Slides photography"
                         onclick="currentSlide(3)"></div>
-                <div class="slideshow-row-items"><img src="img/slider/house4.jpg" alt="Slides photography"
+                <div class="slideshow-row-items"><img src="img/slider/slider1.png" alt="Slides photography"
                         onclick="currentSlide(4)"></div>
             </div>
         </div>
@@ -203,10 +190,12 @@
             </div>
             <div class="block-why-us-form">
                 <div class="block-why-us-form_title">Виникли питання?<br>Ми передзвонимо вам протягом 30 хвилин!</div>
-                <form action="  ">
+                <form action="/feedback.php" method="POST">
                     <ul class="form-items">
-                        <li class="form-item"><input type="text" placeholder="Ім'я"></li>
-                        <li class="form-item"><input type="text" placeholder="Номер"></li>
+                        <div class="error">Ви ввели некоректне ім'я</div>
+                        <li class="form-item"><input type="text" placeholder="Ім'я" required></li>
+                        <div class="error">Ви ввели некоректну поштову адресу</div>
+                        <li class="form-item"><input type="text" placeholder="Номер" required></li>
                         <li class="form-item"><button type="submit">Замовити дзвінок</button></li>
                     </ul>
                 </form>
@@ -218,12 +207,14 @@
             <div class="block-contacts-container">
                 <div class="block-contacts-items">
                     <div class="block-contacts-item">
-                        <div class="block-contacts-item_img"><img src="img/icons/placeholder-filled-point.png" alt="Geoposition icon"></div>
+                        <div class="block-contacts-item_img"><img src="img/icons/icon-geoposition.svg"
+                                alt="Geoposition icon"></div>
                         <div class="block-contacts-item_geoposition">вул. Лучкая, Міжгір’я, <br>
                             Закарпатська область, 90001</div>
                     </div>
                     <div class="block-contacts-item">
-                        <div class="block-contacts-item_img"><img src="img/icons/smartphone-call.png" alt="Smartphone icon"></div>
+                        <div class="block-contacts-item_img"><img src="img/icons/icon-call.svg"
+                                alt="Smartphone icon"></div>
                         <div class="block-contacts-item_link"><a href="tel:+380664126181">+ 380 66 412 61 81</a></div>
                     </div>
                 </div>
@@ -231,9 +222,16 @@
             </div>
         </div>
     </div>
-    <script src="/js/form.js"></script>
-    <script src="/js/slider.js"></script>
-    <script src="/js/maps.js"></script>
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>Wood House © 2019 Будівництво дерев’янних споруд</div>
+            </div>
+        </div>
+    </footer>
+    <script src="script/lang-switch.js"></script>
+    <script src="script/slider.js"></script>
+    <script src="script/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04EqmmFTH7HHvNzsgQTNyWK2GJ20mrjw&callback=initMap"
         async defer></script>
 
