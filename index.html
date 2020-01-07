@@ -21,31 +21,39 @@
 </head>
 
 <body>
-    <header class="desktop-header">
+    <header class="header">
         <div class="container">
             <div class="header-wrapper">
                 <div class="header-logo">
-                    <div class="header-logo-img"><img src="img/logo.svg" alt="Wooden Houses"></div>
-                    <div class="header-logo-title">Wooden<br>houses</div>
+                    <div class="header-logo-img"><img src="img/logo.svg" alt="Будинок із зрубу"></div>
+                    <div class="header-logo-title">Zrub<br>dom</div>
                 </div>
-                <div class="header-menu">
-                    <nav class="header-menu-nav">
-                        <ul class="header-menu-list">
-                            <li> <a href="#" class="header-menu-list_link">Будівництво</a></li>
-                            <li> <a href="#" class="header-menu-list_link">Сервіс</a></li>
-                            <li> <a href="#" class="header-menu-list_link">Наші роботи</a></li>
-                            <li> <a href="#" class="header-menu-list_link">Контакти</a></li>
+                <nav class="header-menu">
+                    <ul class="header-menu-list">
+                        <ul class="burger-menu-lang">
+                            <li>
+                                <div class="header-language" id="lang">
+                                    <img src="img/icons/icon-ua_green.svg" alt="Language icon" class="language-switch">
+                                    <a href="html/rus/index.html" class="header-language-link">УКР</a></div>
+                            </li>
                         </ul>
-                    </nav>
-                </div>
+                        <li> <a href="#why-zrub" class="header-menu-list_link">Будівництво</a></li>
+                        <li> <a href="#why-us" class="header-menu-list_link">Сервіс</a></li>
+                        <li> <a href="#catalogue" class="header-menu-list_link">Наші роботи</a></li>
+                        <li> <a href="#contacts" class="header-menu-list_link">Контакти</a></li>
+                    </ul>
+                </nav>
                 <div class="header-additional">
                     <div class="header-language" id="lang">
                         <img src="img/icons/icon-ua.svg" alt="Language icon" class="language-switch">
-                        <a href="index.html" class="header-language-link" id="lang_switch" title="ua">Українська</a>
+                        <a href="html/rus/index.html" class="header-language-link">Українська</a>
                     </div>
                     <div class="header-contact">
                         <a href="tel:+380664126181" class="header-contact-link">+ 380 66 412 61 81</a>
                     </div>
+                </div>
+                <div class="header-burger">
+                    <span></span>
                 </div>
             </div>
 
@@ -66,8 +74,8 @@
             <div class="block-content-presentation_title">Ми будуємо деревянні споруди під ваше замовлення</div>
             <hr class="content-divider">
             <div class="block-content-presentation_text">Для будівництва наших проектів використовується дикий зруб. Цей
-                матеріал є найбільш<br>екологічним та комфортним для проживання людини. Майстерність та
-                компетентність<br>наших
+                матеріал є найбільш екологічним та комфортним для проживання людини. Майстерність та
+                компетентність наших
                 майстрів дозволяє надавати такі комплексні рішення.</div>
             <div class="block-content-presentation_products">
                 <div class="products-item">
@@ -79,23 +87,21 @@
                     <div class="products-item-title">Лавки, столи</div>
                 </div>
                 <div class="products-item">
-                    <div class="products-item-img"><img src="img/icons/icon-garden-house.svg"
-                            alt="Icon garden house">
+                    <div class="products-item-img"><img src="img/icons/icon-garden-house.svg" alt="Icon garden house">
                     </div>
                     <div class="products-item-title">Бані, альтанки</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="block-why-zrub">
+    <div class="block-why-zrub" id="why-zrub">
         <div class="container-content">
             <div class="block-why-zrub-wrapper">
                 <div class="block-why-zrub-title">
                     Why log wood?
                 </div>
                 <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-pinetree.svg"
-                            alt="Pinetree icon">
+                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-pinetree.svg" alt="Pinetree icon">
                     </div>
                     <div class="block-why-zrub-benefits_text">Будівництво із дикого зрубу передбачає використання
                         соснових
@@ -130,29 +136,31 @@
         </div>
     </div>
     <div class="container-content">
-        <div class="slideshow-container">
+        <div class="slideshow-container" id="catalogue">
             <div class="slider-title">Каталог наших товарів</div>
             <div class="slideshow-items">
                 <div class="slides-item"><img src="img/slider/slider1.png" alt="Slides photography"></div>
                 <div class="slides-item"><img src="img/slider/slider2.png" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/slider/slider4.png" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/slider/slider1.png" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/slider/slider3.png" alt="Slides photography"></div>
+                <div class="slides-item"><img src="img/slider/slider4.jpg" alt="Slides photography"></div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <div class="slideshow-row">
-                <div class="slideshow-row-items"><img src="img/slider/slider1.png" alt="Slides photography"
-                        onclick="currentSlide(1)"></div>
-                <div class="slideshow-row-items"><img src="img/slider/slider2.png" alt="Slides photography"
-                        onclick="currentSlide(2)"></div>
-                <div class="slideshow-row-items"><img src="img/slider/slider4.png" alt="Slides photography"
-                        onclick="currentSlide(3)"></div>
-                <div class="slideshow-row-items"><img src="img/slider/slider1.png" alt="Slides photography"
-                        onclick="currentSlide(4)"></div>
+                <div class="slideshow-row-items"><img src="img/slider/slider1.png" alt="Slides photography" id="1"></div>
+                <div class="slideshow-row-items"><img src="img/slider/slider2.png" alt="Slides photography" id="2"></div>
+                <div class="slideshow-row-items"><img src="img/slider/slider3.png" alt="Slides photography" id="3"></div>
+                <div class="slideshow-row-items"><img src="img/slider/slider4.jpg" alt="Slides photography" id="4"></div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot" id="1"></span>
+                <span class="dot" id="2"></span>
+                <span class="dot" id="3"></span>
+                <span class="dot" id="4"></span>
             </div>
         </div>
     </div>
-    <div class="block-why-us">
+    <div class="block-why-us" id="why-us">
         <div class="container-content">
             <div class="block-why-us-title">Що ви отримуєте про виборі нашого проекту?</div>
             <div class="block-why-us-items">
@@ -202,7 +210,7 @@
             </div>
         </div>
     </div>
-    <div class="block-contacts">
+    <div class="block-contacts" id="contacts">
         <div class="container">
             <div class="block-contacts-container">
                 <div class="block-contacts-items">
@@ -213,8 +221,8 @@
                             Закарпатська область, 90001</div>
                     </div>
                     <div class="block-contacts-item">
-                        <div class="block-contacts-item_img"><img src="img/icons/icon-call.svg"
-                                alt="Smartphone icon"></div>
+                        <div class="block-contacts-item_img"><img src="img/icons/icon-call.svg" alt="Smartphone icon">
+                        </div>
                         <div class="block-contacts-item_link"><a href="tel:+380664126181">+ 380 66 412 61 81</a></div>
                     </div>
                 </div>
@@ -229,8 +237,8 @@
             </div>
         </div>
     </footer>
-    <script src="script/lang-switch.js"></script>
-    <script src="script/slider.js"></script>
+
+    <script src="script/script.js"></script>
     <script src="script/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04EqmmFTH7HHvNzsgQTNyWK2GJ20mrjw&callback=initMap"
         async defer></script>
