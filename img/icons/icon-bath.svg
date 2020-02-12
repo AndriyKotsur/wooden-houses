@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="99.5" viewBox="0 0 80 99.5">
+  <g id="Group_113" data-name="Group 113" transform="translate(-573 -1126)">
+    <path id="Polygon_8" data-name="Polygon 8" d="M38.586,1.414a2,2,0,0,1,2.828,0L76.586,36.586A2,2,0,0,1,75.172,40H4.828a2,2,0,0,1-1.414-3.414Z" transform="translate(573 1126)" fill="#6fc28a"/>
+    <g id="Group_112" data-name="Group 112" transform="translate(589.251 1183.647)">
+      <path id="Path_43" data-name="Path 43" d="M14.168,0S1.553,6.5,7.7,16.265,0,29.7,0,29.7" transform="matrix(0.978, -0.208, 0.208, 0.978, 0, 2.946)" fill="none" stroke="#6fc28a" stroke-width="3"/>
+      <path id="Path_44" data-name="Path 44" d="M14.168,0S1.553,6.5,7.7,16.265,0,29.7,0,29.7" transform="matrix(0.978, -0.208, 0.208, 0.978, 14, 2.946)" fill="none" stroke="#6fc28a" stroke-width="3"/>
+      <path id="Path_45" data-name="Path 45" d="M14.168,0S1.553,6.5,7.7,16.265,0,29.7,0,29.7" transform="matrix(0.978, -0.208, 0.208, 0.978, 28, 2.946)" fill="none" stroke="#6fc28a" stroke-width="3"/>
+    </g>
+    <path id="Path_46" data-name="Path 46" d="M2814.871,841.355v55.551H2875.9V841.355" transform="translate(-2232.371 327.094)" fill="none" stroke="#6fc28a" stroke-width="3"/>
+  </g>
+</svg>

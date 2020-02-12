@@ -22,30 +22,31 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header-inner">
             <div class="header-wrapper">
                 <div class="header-logo">
-                    <div class="header-logo-img"><img src="img/logo.svg" alt="Будинок із зрубу"></div>
-                    <div class="header-logo-title">Zrub<br>dom</div>
+                    <a class="header-logo-link" href="index.html">
+                        <span class="logo logo-desktop"></span>
+                        <span class="logo logo-mobile"></span>
+                    </a>
                 </div>
                 <nav class="header-menu">
                     <ul class="header-menu-list">
-                        <ul class="burger-menu-lang">
+                        <ul class="header-burger-menu-lang">
                             <li>
-                                <div class="header-language" id="lang">
-                                    <img src="img/icons/icon-ua_green.svg" alt="Language icon" class="language-switch">
-                                    <a href="html/rus/index.html" class="header-language-link">УКР</a></div>
+                                <div class="header-language"><a href="html/rus/index.html"
+                                        class="header-language-link">УКР</a></div>
                             </li>
                         </ul>
-                        <li> <a href="#why-zrub" class="header-menu-list_link">Будівництво</a></li>
-                        <li> <a href="#why-us" class="header-menu-list_link">Сервіс</a></li>
-                        <li> <a href="#catalogue" class="header-menu-list_link">Наші роботи</a></li>
-                        <li> <a href="#contacts" class="header-menu-list_link">Контакти</a></li>
+                        <li> <a href="#why-zrub" class="header-menu-list-link">Будівництво</a></li>
+                        <li> <a href="#why-zrub" class="header-menu-list-link">Статті</a></li>
+                        <li> <a href="#why-us" class="header-menu-list-link">Сервіс</a></li>
+                        <li> <a href="#catalogue" class="header-menu-list-link">Наші роботи</a></li>
+                        <li> <a href="#contacts" class="header-menu-list-link">Контакти</a></li>
                     </ul>
                 </nav>
                 <div class="header-additional">
                     <div class="header-language" id="lang">
-                        <img src="img/icons/icon-ua.svg" alt="Language icon" class="language-switch">
                         <a href="html/rus/index.html" class="header-language-link">Українська</a>
                     </div>
                     <div class="header-contact">
@@ -53,196 +54,185 @@
                     </div>
                 </div>
                 <div class="header-burger">
-                    <span></span>
+                    <span class="icon-burger"></span>
                 </div>
-            </div>
 
+            </div>
         </div>
     </header>
 
-    <div class="presentation-img">
-        <picture>
-            <source media="(min-width: 1920px)" srcset="img/title/title-img-extra.png">
-            <source media="(max-width: 1920px)" srcset="img/title/title-img-big.png">
-            <source media="(max-width: 1024px)" srcset="img/title/title-img-medium.png">
-            <source media="(max-width: 768px)" srcset="img/title/title-img-small.png">
-            <img src="img/title/title-img-big.png" alt="Title image">
-        </picture>
+    <div class="main-page-title-inner">
+        <div class="main-page-title">
+            <img src="img/title/title-new-test.jpg" alt="Title image">
+            <div class="main-page-title-content">
+                <h2 class="main-page-title-header">Карпатський зруб</h2>
+                <p class="main-page-title-text">Будівництво деревянних будинків та інших споруд</p>
+            </div>
+        </div>
+        <a href="#presentation" class="main-page-title arrow-to-down"></a>
     </div>
-    <div class="container-content">
-        <div class="block-content-presentation">
-            <div class="block-content-presentation_title">Ми будуємо деревянні споруди під ваше замовлення</div>
-            <hr class="content-divider">
-            <div class="block-content-presentation_text">Для будівництва наших проектів використовується дикий зруб. Цей
+
+    <div class="main-page-presentation-inner" id="presentation">
+        <div class="main-page-presentation">
+            <div class="main-page-presentation-header">Ми будуємо деревянні споруди під ваше замовлення</div>
+            <div class="main-page-presentation-text">Для будівництва наших проектів використовується дикий зруб. Цей
                 матеріал є найбільш екологічним та комфортним для проживання людини. Майстерність та
                 компетентність наших
-                майстрів дозволяє надавати такі комплексні рішення.</div>
-            <div class="block-content-presentation_products">
-                <div class="products-item">
-                    <div class="products-item-img"><img src="img/icons/icon-house.svg" alt="Icon house"></div>
-                    <div class="products-item-title">Будинки</div>
-                </div>
-                <div class="products-item">
-                    <div class="products-item-img"><img src="img/icons/icon-bench.svg" alt="Icon bench"></div>
-                    <div class="products-item-title">Лавки, столи</div>
-                </div>
-                <div class="products-item">
-                    <div class="products-item-img"><img src="img/icons/icon-garden-house.svg" alt="Icon garden house">
+                майстрів дозволяє надавати такі комплексні рішення:</div>
+            <div class="main-page-presentation-products">
+                <div class="main-page-presentation-products-row">
+                    <div class="products-item">
+                        <a href="#" class="products-item-link icon-house">Будинки</a>
                     </div>
-                    <div class="products-item-title">Бані, альтанки</div>
+                    <div class="products-item">
+                        <a href="#" class="products-item-link icon-bath">Бані</a>
+                    </div>
+                    <div class="products-item">
+                        <a href="#" class="products-item-link icon-garden">Альтанки</a>
+                    </div>
+                </div>
+                <div class="main-page-presentation-products-row">
+                    <div class="products-item">
+                        <a href="#" class="products-item-link icon-table">Столи</a>
+                    </div>
+                    <div class="products-item">
+                        <a href="#" class="products-item-link icon-swing">Гойдалки</a>
+                    </div>
+                    <div class="products-item">
+                        <a href="#" class="products-item-link icon-bench">Лавки</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="block-why-zrub" id="why-zrub">
-        <div class="container-content">
-            <div class="block-why-zrub-wrapper">
-                <div class="block-why-zrub-title">
-                    Why log wood?
+    <div class="main-page-zrub" id="why-zrub">
+        <div class="main-page-zrub-wrapper">
+            <div class="main-page-zrub-inner">
+                <div class="main-page-zrub-title">
+                    <h2 class="main-page-zrub-title-header">Чому саме дикий зруб?</h2>
                 </div>
-                <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-pinetree.svg" alt="Pinetree icon">
-                    </div>
-                    <div class="block-why-zrub-benefits_text">Будівництво із дикого зрубу передбачає використання
-                        соснових
-                        порід дерева. Використання натурального дерева забезпечує екологічність та експлуатаційну
-                        стійкість
-                        такого будинку.</div>
+                <div class="main-page-zrub-benefits">
+                    <div class=" icon icon-tree"></div>
+                    <div class="main-page-zrub-benefits-text">Будівництво із дикого зрубу передбачає
+                        використання соснових порід дерева. Використання натурального дерева забезпечує екологічність та
+                        експлуатаційну стійкість такого будинку.</div>
                 </div>
-                <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-money.svg" alt="Money icon">
-                    </div>
-                    <div class="block-why-zrub-benefits_text">Використання такого матеріалу суттєво знижує витрати на
+                <div class="main-page-zrub-benefits">
+                    <div class="icon icon-money"></div>
+                    <div class="main-page-zrub-benefits-text">Використання такого матеріалу суттєво знижує
+                        витрати на
                         будівництво. Готовий проект із дикого зруба обійдеться дешевше ніж при використанні інших
-                        матеріалів.</div>
-                </div>
-                <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-table.svg" alt="Table icon">
+                        матеріалів.
                     </div>
-                    <div class="block-why-zrub-benefits_text">Термін будівництва проекту із дикого зрубу займає від 6 до
-                        9
-                        місяців.
-                        Це коротший термін як будівництво аналогічного проекту із інших
-                        матеріалів.</div>
                 </div>
-                <div class="block-why-zrub-benefits">
-                    <div class="block-why-zrub-benefits_img"><img src="img/icons/icon-clock.svg" alt="Clock icon">
+                <div class="main-page-zrub-benefits">
+                    <div class="icon icon-timetable"></div>
+                    <div class="main-page-zrub-benefits-text">Термін будівництва проекту із дикого зрубу
+                        займає від 6 до 9 місяців. Це коротший термін як будівництво аналогічного проекту із інших
+                        матеріалів.
                     </div>
-                    <div class="block-why-zrub-benefits_text">Термін експлуатаціх таких проектів має необмежений
-                        характер.
-                        При правильному догляді, будинок служить довговічно.</div>
+                </div>
+                <div class="main-page-zrub-benefits">
+                    <div class="icon icon-clock"></div>
+                    <div class="main-page-zrub-benefits-text">Термін експлуатаціх таких проектів має
+                        необмежений характер. При правильному догляді, будинок служить довговічно своїм власникам.</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-content">
-        <div class="slideshow-container" id="catalogue">
-            <div class="slider-title">Каталог наших товарів</div>
-            <div class="slideshow-items">
-                <div class="slides-item"><img src="img/slider/slider1.png" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/slider/slider2.png" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/slider/slider3.png" alt="Slides photography"></div>
-                <div class="slides-item"><img src="img/slider/slider4.jpg" alt="Slides photography"></div>
-                <a class="prev">&#10094;</a>
-                <a class="next">&#10095;</a>
+    </div>
+
+    <div class="main-page-slider-inner">
+        <div class="main-page-slider" id="catalogue">
+            <div class="main-page-slider-title">Каталог наших товарів</div>
+            <div class="main-page-slider-items">
+                <div class="slider-items sliderItems"><img src="img/slider/slides1.jpg" alt="Slides photography"></div>
+                <div class="slider-items sliderItems"><img src="img/slider/slides2.jpg" alt="Slides photography"></div>
+                <div class="slider-items sliderItems"><img src="img/slider/slides3.jpg" alt="Slides photography"></div>
+                <div class="slider-items sliderItems"><img src="img/slider/slides4.jpg" alt="Slides photography"></div>
+                <div class="slider-items sliderItems"><img src="img/slider/slides5.jpg" alt="Slides photography"></div>
+                <div class="slider-items sliderItems"><img src="img/slider/slides6.jpg" alt="Slides photography"></div>
+                <a class="prev-btn prevBtn"></a>
+                <a class="next-btn nextBtn"></a>
             </div>
-            <div class="slideshow-row">
-                <div class="slideshow-row-items"><img src="img/slider/slider1.png" alt="Slides photography" id="1"></div>
-                <div class="slideshow-row-items"><img src="img/slider/slider2.png" alt="Slides photography" id="2"></div>
-                <div class="slideshow-row-items"><img src="img/slider/slider3.png" alt="Slides photography" id="3"></div>
-                <div class="slideshow-row-items"><img src="img/slider/slider4.jpg" alt="Slides photography" id="4"></div>
+            <div class="main-page-slider-gallery sliderGallery">
+                <div class="gallery-items"><img src="img/slider/slides1.jpg" alt="Slides photography" id="1"></div>
+                <div class="gallery-items"><img src="img/slider/slides2.jpg" alt="Slides photography" id="2"></div>
+                <div class="gallery-items"><img src="img/slider/slides3.jpg" alt="Slides photography" id="3"></div>
+                <div class="gallery-items"><img src="img/slider/slides4.jpg" alt="Slides photography" id="4"></div>
+                <div class="gallery-items"><img src="img/slider/slides5.jpg" alt="Slides photography" id="5"></div>
+                <div class="gallery-items"><img src="img/slider/slides6.jpg" alt="Slides photography" id="6"></div>
             </div>
-            <div class="slider-dots">
-                <span class="dot" id="1"></span>
-                <span class="dot" id="2"></span>
-                <span class="dot" id="3"></span>
-                <span class="dot" id="4"></span>
+            <div class="main-page-slider-dots sliderDots">
+                <span class="dot-items" id="1"></span>
+                <span class="dot-items" id="2"></span>
+                <span class="dot-items" id="3"></span>
+                <span class="dot-items" id="4"></span>
+                <span class="dot-items" id="5"></span>
+                <span class="dot-items" id="6"></span>
+                <span class="dot-items" id="7"></span>
+
             </div>
         </div>
     </div>
-    <div class="block-why-us" id="why-us">
-        <div class="container-content">
-            <div class="block-why-us-title">Що ви отримуєте про виборі нашого проекту?</div>
-            <div class="block-why-us-items">
-                <div class="block-why-us-items_left">
-                    <div class="block-why-us-item">
-                        <div class="block-why-us-item_number">1</div>
-                        <div class="block-why-us-item_text">Індивідуальний підхід
-                            до кожного клієнта</div>
-                    </div>
-                    <div class="block-why-us-item">
-                        <div class="block-why-us-item_number">2</div>
-                        <div class="block-why-us-item_text">Дотримання домовлених термінів <br> та врахування всіх
-                            побажань
-                        </div>
-                    </div>
-                    <div class="block-why-us-item">
-                        <div class="block-why-us-item_number">3</div>
-                        <div class="block-why-us-item_text">Досвід та професіоналізм</div>
-                    </div>
-                </div>
-                <div class="block-why-us-items_right">
-                    <div class="block-why-us-item">
-                        <div class="block-why-us-item_number">4</div>
-                        <div class="block-why-us-item_text">Висока якість виконання проекту</div>
-                    </div>
-                    <div class="block-why-us-item">
-                        <div class="block-why-us-item_number">5</div>
-                        <div class="block-why-us-item_text">Ціни, які відповідають умовам на ринку</div>
-                    </div>
-                    <div class="block-why-us-item">
-                        <div class="block-why-us-item_number">6</div>
-                        <div class="block-why-us-item_text">Відповідальність за виконану роботу</div>
-                    </div>
-                </div>
+    <div class="main-page-us" id="why-us">
+        <div class="main-page-us-inner">
+            <div class="main-page-us-title">
+                <h2 class="main-page-us-title-header">Що ви отримуєте при виборі нашого проекту?</h2>
             </div>
-            <div class="block-why-us-form">
-                <div class="block-why-us-form_title">Виникли питання?<br>Ми передзвонимо вам протягом 30 хвилин!</div>
+            <div class="main-page-us-items">
+                <ol class="main-page-us-items-list-left">
+                    <li class="list-us-items">Індивідуальний підхід
+                        до кожного клієнта</li>
+                    <li class="list-us-items">Дотримання домовлених термінів</li>
+                    <li class="list-us-items">Досвід та професіоналізм</li>
+                </ol>
+                <ol class="main-page-us-items-list-right">
+                    <li class="list-us-items">Висока якість виконання проекту</li>
+                    <li class="list-us-items">Ціни, які відповідають умовам на ринку</li>
+                    <li class="list-us-items">Відповідальність за виконану роботу</li>
+                </ol>
+            </div>
+            <div class="main-page-us-form">
+                <div class="main-page-us-form-title">Виникли питання?<br>Ми передзвонимо вам протягом 30 хвилин!</div>
                 <form action="/feedback.php" method="POST">
-                    <ul class="form-items">
-                        <div class="error">Ви ввели некоректне ім'я</div>
-                        <li class="form-item"><input type="text" placeholder="Ім'я" required></li>
-                        <div class="error">Ви ввели некоректну поштову адресу</div>
-                        <li class="form-item"><input type="text" placeholder="Номер" required></li>
-                        <li class="form-item"><button type="submit">Замовити дзвінок</button></li>
+                    <ul class="main-page-us-form-items">
+                        <li class="form-items"><input type="text" placeholder="Ім'я" name="name" required></li>
+                        <li class="form-items"><input type="tel" placeholder="Номер" name="phone" required></li>
+                        <li class="form-items"><input type="submit" value="Замовити дзвінок"></input></li>
                     </ul>
                 </form>
             </div>
         </div>
     </div>
-    <div class="block-contacts" id="contacts">
-        <div class="container">
-            <div class="block-contacts-container">
-                <div class="block-contacts-items">
-                    <div class="block-contacts-item">
-                        <div class="block-contacts-item_img"><img src="img/icons/icon-geoposition.svg"
-                                alt="Geoposition icon"></div>
-                        <div class="block-contacts-item_geoposition">вул. Лучкая, Міжгір’я, <br>
+    <div class="main-page-contacts" id="contacts">
+        <div class="main-page-contacts-inner">
+            <div class="main-page-contacts-wrapper">
+                <div class="main-page-contacts-items">
+                    <div class="contacts-item">
+                        <div class="icon icon-geoposition"></div>
+                        <div class="contacts-item-geoposition">вул. Лучкая, Міжгір’я, <br>
                             Закарпатська область, 90001</div>
                     </div>
-                    <div class="block-contacts-item">
-                        <div class="block-contacts-item_img"><img src="img/icons/icon-call.svg" alt="Smartphone icon">
-                        </div>
-                        <div class="block-contacts-item_link"><a href="tel:+380664126181">+ 380 66 412 61 81</a></div>
+                    <div class="contacts-item">
+                        <a href="tel:+380664126181" class="contacts-items-phone">+ 380 66 412 61 81</a>
                     </div>
                 </div>
-                <div class="block-contacts-map" id="google-map"></div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d337914.0467662834!2d23.233557231266964!3d48.57243958472667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4739e7f22aa3d929%3A0x3eed3dfe187132ae!2z0JzRltC20LPRltGA0YHRjNC60LjQuSDRgNCw0LnQvtC9LCDQl9Cw0LrQsNGA0L_QsNGC0YHRjNC60LAg0L7QsdC70LDRgdGC0Yw!5e0!3m2!1suk!2sua!4v1581441345807!5m2!1suk!2sua"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <div class="footer-container">
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-inner">
                 <div>Wood House © 2019 Будівництво дерев’янних споруд</div>
             </div>
         </div>
     </footer>
 
     <script src="script/script.js"></script>
-    <script src="script/maps.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04EqmmFTH7HHvNzsgQTNyWK2GJ20mrjw&callback=initMap"
-        async defer></script>
-
 </body>
 
 </html>
