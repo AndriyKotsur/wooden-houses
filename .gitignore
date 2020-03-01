@@ -1,6 +1,6 @@
-# node_modules/
-# dsgn/
-# *.config
-# *.log
-# *.code-workspace
-# .DS_Store
+node_modules/
+dsgn/
+*.config
+*.log
+*.code-workspace
+.DS_Store
