@@ -1,57 +1,66 @@
-(function ($) {
-	$("form").submit(function (event) {
-		event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    const successPopUp = document.querySelector('.pop-up');
+    const errMsg = document.querySelector('.form-error');
 
-		// Сохраняем в переменную form id текущей формы, на которой сработало событие submit
-		let form = $('#' + $(this).attr('id'))[0];
+    const message = {
+        name: "Ви не ввели ім'я",
+        phone: "Ви не ввели телефон",
+        full: "Заповніть поля"
+    };
 
-		// Сохраняем в переменные значения полей (для валидации)
-		let inpName = $(this).find('.form-items-name').val();
-		let inpPhone = $(this).find('.form-items-phone').val();
+    /* SEND */
 
-		// Сохраняем в переменные дивы, в которые будем выводить текст ошибки
-		let inpNameError = $(this).find('.form-error-name');
-		let inpPhoneError = $(this).find('.form-error-phone');
+    const formSend = (formData) => {
+        fetch('mail.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(responce => {
+                successPopUp.classList.add('active')
+            })
+            .catch(error => console.log(error));
+    };
 
-        let formTitle = $(this).find('main-page-us-form-title');
-        let formDescription = $(this).find('.main-page-us-form-description');
+    /* CLOSE BTN */
 
-		let fd = new FormData(form);
-		$.ajax({
-			url: "/php/mail.php", //тут вкажи шлях до файлу із обробкою форми
-			type: "POST",
-			data: fd,
-			processData: false,
-			contentType: false,
-			success: function success(res) {
-				let respond = $.parseJSON(res);
+    let closeBtn = document.querySelector('.pop-up-close');
+    closeBtn.addEventListener('click', function () {
+        successPopUp.classList.remove('active');
+    });
 
-				if (respond.name) {
-					inpNameError.text(respond.name);
-				} else {
-                    inpNameError.show();
-					inpNameError.text("Ви не ввели ім'я");
-				}
+    const forms = document.getElementsByTagName("form");
+    const nameInp = document.querySelector('.form-items-name');
+    const phoneInp = document.querySelector('.form-items-phone');
 
-				if (respond.phone) {
-					inpPhoneError.text(respond.tel);
-				} else {
-                    inpPhoneError.show();
-					inpPhoneError.text("Ви не ввели телефон");
-				}
+    for (let i = 0; i < forms.length; i++) {
+        forms[i].addEventListener('submit', function (e) {
+            e.preventDefault();
+            if ((nameInp.value == null || nameInp.value == '') && (phoneInp.value == null || phoneInp.value == '')) {
+                errMsg.innerHTML = message.full;
+                errMsg.classList.add('active');
+                return false;
+            } else if (nameInp.value && phoneInp.value) {
+                errMsg.classList.remove('active');
+            }
+            if (nameInp.value == null || nameInp.value == '') {
+                errMsg.innerHTML = message.name;
+                errMsg.classList.add('active');
+                return false;
+            }
+            if (phoneInp.value == null || phoneInp.value == '') {
+                console.log('wrong phone');
+                errMsg.innerHTML = message.phone;
+                errMsg.classList.add('active');
+                return false;
+            }
+            let formData = new FormData(this);
+            formData = Object.fromEntries(formData);
 
-                if (respond.success) {
-                    formTitle.hide();
-                    formDescription.text();
-                    setTimeout(() => {
-                        formDescription.hide();
-                    }, 4000);
-                    setTimeout(() => {
-                        formDescription.text('Дякуємо за звернення! Ми зателефонуємо вам протягом 30 хвилин');
-                    }, 5000);
-                }
-    
-			},
-		});
-	});
-}(jQuery));
+            formSend(formData);
+            this.reset();
+        })
+    }
+});

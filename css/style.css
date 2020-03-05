@@ -237,7 +237,7 @@ h6 {
     font-size: 14px;
   }
 
-  .header-language-link {
+  .header-language-link_ua {
     font-size: 14px;
   }
 
@@ -1075,19 +1075,15 @@ h6 {
 .main-page-us-form-items .form-items:first-child {
   margin-top: 20px;
 }
-.main-page-us-form-items .form-error-name {
+.main-page-us-form-items .form-error {
   display: none;
-  padding: 5px 5px;
+  padding: 10px 10px;
   background-color: red;
   color: #ffffff;
   opacity: 0.7;
 }
-.main-page-us-form-items .form-error-phone {
-  display: none;
-  padding: 5px 5px;
-  background-color: red;
-  color: #ffffff;
-  opacity: 0.7;
+.main-page-us-form-items .form-error.active {
+  display: block;
 }
 .main-page-us-form-items input[type=text],
 .main-page-us-form-items input[type=tel] {
@@ -1377,29 +1373,92 @@ h6 {
   text-align: center;
 }
 
-/* FEEDBACK */
-.feedback-page {
-  position: relative;
-}
-.feedback-page-inner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  max-width: 1170px;
+/* POPUP */
+.pop-up {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
   width: 100%;
-  margin: 0px auto;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
 }
-.feedback-page-title {
-  margin: 0px 0px 40px 0px;
+.pop-up .pop-up-close {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+.pop-up .pop-up-close:before,
+.pop-up .pop-up-close:after {
+  content: "";
+  background-color: #707070;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+.pop-up .pop-up-close:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 9px;
+}
+.pop-up .pop-up-close:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+}
+.pop-up-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px 20px 40px 20px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  text-align: center;
+}
+.pop-up-content-title {
   color: #707070;
   font-family: "Open Sans";
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.5px;
 }
-.feedback-page-text {
-  margin: 0px 0px 20px 0px;
+.pop-up-content-title::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 70px;
+  background: url("../img/icons/icon-pinetree-modal.svg");
+  margin: 0px auto 20px;
+}
+.pop-up-content-text {
+  margin: 5px 0px 0px 0px;
   color: #707070;
   font-family: "Open Sans";
   font-size: 18px;
@@ -1407,8 +1466,7 @@ h6 {
   line-height: 30px;
   letter-spacing: normal;
 }
-.feedback-page-link {
-  display: inline-block;
-  padding: 20px 40px 20px 40px;
-  background-color: #6FC28A;
+
+.pop-up.active {
+  display: block;
 }
