@@ -893,35 +893,26 @@ $maxwidth:1170px;
         margin: 0px auto;
     }
 
-    .contacts-item:first-child {
-        @include flexbox();
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
+    .contacts-item {
+        margin: 0px 0px 25px 0px;
+    }
 
-        .icon {
-            flex: 0 0 30px;
-            position: relative;
-            background-repeat: no-repeat;
-            background-position: 50%;
-            background-size: contain;
-            margin-right: 20px;
+    .contacts-item-geoposition {
+        color: $colorText;
+        font-family: $fontfamilyText;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0.5px;
 
-            &.icon-geoposition {
-                background-image: url(../img/icons/icon-geoposition.svg);
-                width: 30px;
-                height: 55px;
-            }
-        }
-
-        .contacts-item-geoposition {
-            color: $colorText;
-            font-family: $fontfamilyText;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 30px;
-            letter-spacing: 0.5px;
+        &::before {
+            content: '';
+            background: url(../img/icons/icon-geoposition.svg);
+            width: 30px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0px 20px 0px 0px;
         }
     }
 
@@ -940,8 +931,31 @@ $maxwidth:1170px;
         &::before {
             content: '';
             background: url(../img/icons/icon-call.svg);
+            width: 25px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0px 20px 0px 0px;
+        }
+    }
+
+    .contacts-items-mail {
+        color: $colorText;
+        font-family: $fontfamilyText;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::before {
+            content: '';
+            background: url(../img/icons/icon-mail.svg);
             width: 30px;
-            height: 50px;
+            height: 25px;
             display: inline-block;
             vertical-align: middle;
             margin-right: 20px;

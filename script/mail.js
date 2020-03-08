@@ -1,17 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     const successPopUp = document.querySelector('.pop-up');
     const errMsg = document.querySelector('.form-error');
 
     const message = {
         name: "Ви не ввели ім'я",
         phone: "Ви не ввели телефон",
-        full: "Заповніть поля"
+        name_phone: "Заповніть поля"
     };
 
     /* SEND */
 
     const formSend = (formData) => {
-        fetch('mail.php', {
+        fetch('send.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         successPopUp.classList.remove('active');
     });
 
+    /* FORM VALIDATION */
     const forms = document.getElementsByTagName("form");
     const nameInp = document.querySelector('.form-items-name');
     const phoneInp = document.querySelector('.form-items-phone');
@@ -38,24 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < forms.length; i++) {
         forms[i].addEventListener('submit', function (e) {
             e.preventDefault();
-            if ((nameInp.value == null || nameInp.value == '') && (phoneInp.value == null || phoneInp.value == '')) {
-                errMsg.innerHTML = message.full;
-                errMsg.classList.add('active');
-                return false;
-            } else if (nameInp.value && phoneInp.value) {
-                errMsg.classList.remove('active');
+            let errKey = null;
+            if (!nameInp.value && !phoneInp.value) {
+                errKey = 'name_phone';
+            } else if (!nameInp.value) {
+                errKey = 'name';
+            } else if (!phoneInp.value) {
+                errKey = 'phone';
             }
-            if (nameInp.value == null || nameInp.value == '') {
-                errMsg.innerHTML = message.name;
-                errMsg.classList.add('active');
-                return false;
-            }
-            if (phoneInp.value == null || phoneInp.value == '') {
-                console.log('wrong phone');
-                errMsg.innerHTML = message.phone;
+            if(errKey) {
+                errMsg.innerHTML = message[errKey];
                 errMsg.classList.add('active');
                 return false;
             }
+
             let formData = new FormData(this);
             formData = Object.fromEntries(formData);
 
