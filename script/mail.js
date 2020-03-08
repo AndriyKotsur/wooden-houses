@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
-    const successPopUp = document.querySelector('.pop-up');
-    const errMsg = document.querySelector('.form-error');
+    const successPopUp = document.querySelector('.popUp');
+    const errMsg = document.querySelector('.formError');
 
     const message = {
         name: "Ви не ввели ім'я",
@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
 
     /* CLOSE BTN */
 
-    let closeBtn = document.querySelector('.pop-up-close');
+    let closeBtn = document.querySelector('.popUpClose');
     closeBtn.addEventListener('click', function () {
         successPopUp.classList.remove('active');
     });
@@ -47,10 +47,13 @@ window.addEventListener("load", () => {
             } else if (!phoneInp.value) {
                 errKey = 'phone';
             }
+
             if(errKey) {
                 errMsg.innerHTML = message[errKey];
                 errMsg.classList.add('active');
                 return false;
+            } else if(!errKey) {
+                errMsg.classList.remove('active');
             }
 
             let formData = new FormData(this);

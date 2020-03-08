@@ -201,15 +201,14 @@
             </div>
             <div class="main-page-us-form">
                 <div class="main-page-us-form-title">Возникли вопросы?<br>Мы перезвоним вам в течение 30 минут!</div>
-                <div class="main-page-us-form-description"></div>
                 <form id="form" method="POST">
                     <div class="main-page-us-form-items">
-                        <div class="form-error-name"></div>
-                        <div class="form-items"><input type="text" placeholder="Імя" name="name" class="form-items-name">
+                        <div class="form-error formError"></div>
+                        <div class="form-items"><input type="text" placeholder="Імя" name="name"
+                                class="form-items-name formItemsName">
                         </div>
-                        <div class="form-error-phone"></div>
                         <div class="form-items"><input type="tel" placeholder="Номер телефона" name="phone"
-                                class="form-items-phone"></div>
+                                class="form-items-phone formItemsPhone"></div>
                         <div class="form-items"><input type="submit" value="Заказать звонок"></div>
                     </div>
                 </form>
@@ -231,6 +230,9 @@
                     <div class="contacts-item">
                         <a href="mailto:bilanynmykola@gmail.com" class="contacts-items-mail">bilanynmykola@gmail.com</a>
                     </div>
+                    <div class="contacts-item">
+                        <a href="mailto:bilanynmykola@gmail.com" class="contacts-items-mail">bilanynmykola@gmail.com</a>
+                    </div>
                 </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d337914.0467662834!2d23.233557231266964!3d48.57243958472667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4739e7f22aa3d929%3A0x3eed3dfe187132ae!2z0JzRltC20LPRltGA0YHRjNC60LjQuSDRgNCw0LnQvtC9LCDQl9Cw0LrQsNGA0L_QsNGC0YHRjNC60LAg0L7QsdC70LDRgdGC0Yw!5e0!3m2!1suk!2sua!4v1581441345807!5m2!1suk!2sua"
@@ -245,7 +247,13 @@
             </div>
         </div>
     </footer>
-
+    <div class="pop-up popUp">
+        <div class="pop-up-content">
+            <div class="pop-up-close popUpClose"></div>
+            <h2 class="pop-up-content-title">Спасибо за ваше обращение!</h2>
+            <p class="pop-up-content-text">Мы перезвоним вам в течение 30 минут</p>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../script/mail.js"></script>
     <script src="../script/script.js"></script>
