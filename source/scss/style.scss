@@ -397,15 +397,15 @@ $maxwidth:1170px;
             &:last-child {
                 .products-item {
                     &:nth-child(1) {
-                        padding: 20px 28px 20px 28px;
+                        padding: 40px 28px 20px 28px;
                     }
 
                     &:nth-child(2) {
-                        padding: 20px 20px 20px 20px;
+                        padding: 30px 20px 20px 20px;
                     }
 
                     &:nth-child(3) {
-                        padding: 20px 26px 0px 26px;
+                        padding: 40px 26px 0px 26px;
                     }
                 }
             }
@@ -415,7 +415,7 @@ $maxwidth:1170px;
 
 /* BLOCK WHY-ZRUB? */
 .main-page-zrub-wrapper {
-    background-image: url(../img/background/background-1.png);
+    background-image: url(../img/background/background-1.jpg);
     background-size: cover;
 }
 
@@ -548,7 +548,7 @@ $maxwidth:1170px;
         color: $colorText;
         text-align: center;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin: 0px 0px 20px 0px;
     }
 
     &-items {
@@ -634,6 +634,7 @@ $maxwidth:1170px;
 
         &-title {
             font-size: 20px;
+            margin: 0px 0px 25px 0px;
         }
     }
 
@@ -647,7 +648,7 @@ $maxwidth:1170px;
 
     .prev-btn,
     .next-btn {
-        padding: 15px 15px;
+        padding: 20px 20px 20px 20px;
         background-color: #000000;
         opacity: 0.8;
         border: none;
@@ -660,14 +661,14 @@ $maxwidth:1170px;
     .main-page-slider-dots {
         position: relative;
         text-align: center;
-        margin-top: 20px;
+        margin: 25px 0px 0px 0px;
 
         .dot-items {
             display: inline-block;
             width: 15px;
             height: 15px;
             background-color: #6FC28A;
-            margin: 0px 5px 0px 5px;
+            margin: 0px 10px 0px 10px;
 
             &.dot-items-active {
                 background-color: #ffffff;
@@ -679,7 +680,7 @@ $maxwidth:1170px;
 
 /* WHY US? */
 .main-page-us {
-    background-image: url(../img/background/background-2.png);
+    background-image: url(../img/background/background-2.jpg);
     background-size: cover;
     padding: 60px 15px 60px 15px;
 
@@ -807,7 +808,7 @@ $maxwidth:1170px;
                 text-align: center;
 
                 &:first-child {
-                    margin-top: 20px;
+                    margin: 20px 0px 0px 0px;
                 }
             }
 
@@ -870,6 +871,16 @@ $maxwidth:1170px;
         &-form {
             &-title {
                 font-size: 20px;
+            }
+
+            &-items {
+                .form-items {
+                    margin: 15px 0px 15px 0px;
+
+                    &:last-child {
+                        margin: 25px 0px 0px 0px;
+                    }
+                }
             }
         }
     }
@@ -1042,8 +1053,8 @@ $maxwidth:1170px;
     &-img-right {
         margin: 0px 0px 0px 80px;
         float: right;
-        max-width: 100%;
-        width: 340px;
+        max-width: 340px;
+        width: 100%;
         height: auto;
     }
 
@@ -1067,6 +1078,7 @@ $maxwidth:1170px;
 
         &-title {
             font-size: 20px;
+            margin: 0px 0px 20px 0px;
         }
 
         &-header {
@@ -1098,6 +1110,9 @@ $maxwidth:1170px;
 
         &-img {
             &:first-child {
+                margin: 0px 0px 25px 0px;
+            }
+            &:last-child{
                 margin: 0px 0px 20px 0px;
             }
         }
@@ -1121,6 +1136,7 @@ $maxwidth:1170px;
         font-family: $fontfamilyHeader;
         font-size: 16px;
         text-align: center;
+        line-height: 20px;
     }
 }
 
@@ -1214,3 +1230,12 @@ $maxwidth:1170px;
 .pop-up.active {
     display: block;
 }
+
+/* WEBHOST */
+
+img[src*="000webhost"]{   
+   
+    display: none !important;   
+    
+    }
+    
